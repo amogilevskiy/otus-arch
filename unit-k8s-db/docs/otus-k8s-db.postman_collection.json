@@ -127,14 +127,14 @@
 	],
 	"variable": [
 		{
-			"id": "39115496-1fe6-4021-bb14-dff2485b6aa6",
+			"id": "7e8ee2e1-692d-4cad-acba-143febd1e3cb",
 			"key": "base_url",
-			"value": "http://localhost:8000"
+			"value": "http://arch.homework/otusapp/amogilevskiy"
 		},
 		{
-			"id": "a2f04972-4c4c-4da4-994a-8f6479e40bac",
+			"id": "c752e784-ad19-4667-be69-b5c3b073064a",
 			"key": "api_url",
-			"value": "http://localhost:8000/api/1.0"
+			"value": "http://arch.homework/otusapp/amogilevskiy/api/1.0"
 		}
 	],
 	"protocolProfileBehavior": {}
