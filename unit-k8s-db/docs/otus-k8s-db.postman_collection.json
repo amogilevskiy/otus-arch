@@ -57,6 +57,37 @@
 			"response": []
 		},
 		{
+			"name": "Partially update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"New name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get user by id",
 			"request": {
 				"method": "GET",
@@ -145,7 +176,7 @@
 	],
 	"variable": [
 		{
-			"id": "c038ebe9-f1c6-45d4-8141-ef35616bee0b",
+			"id": "1002ad85-d953-4f46-a7a7-a976846437c3",
 			"key": "base_url",
 			"value": "arch.homework"
 		}
