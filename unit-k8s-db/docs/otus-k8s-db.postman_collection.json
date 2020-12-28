@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "8bed7d65-d669-438a-b4d7-678ec5af46fb",
+		"name": "otus-k8s-db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/users",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"First name\",\n    \"last_name\": \"Last name\",\n    \"email\": \"test@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/users",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/users/1",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/users/1",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/actuator/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c5c443c5-ec8a-4c6c-8417-316f8eaefaef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d32a523b-f2db-4fd6-88b8-cba8c6549850",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "39115496-1fe6-4021-bb14-dff2485b6aa6",
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		},
+		{
+			"id": "a2f04972-4c4c-4da4-994a-8f6479e40bac",
+			"key": "api_url",
+			"value": "http://localhost:8000/api/1.0"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
