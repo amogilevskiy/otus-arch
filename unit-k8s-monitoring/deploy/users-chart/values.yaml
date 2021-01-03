@@ -1,0 +1,30 @@
+replicaCount: 2
+
+image:
+  repository: amogilevskiy/otus-k8s-db
+
+service:
+  type: NodePort
+  port: 8000
+
+ingress:
+  enabled: true
+  hosts:
+    - host: arch.homework
+      paths: ["/app"]
+
+metrics:
+  serviceMonitor:
+    enabled: true
+
+postgresql:
+  enabled: true
+  postgresqlUsername: user
+  postgresqlPassword: pewpewpew
+  postgresqlDatabase: otus
+  service:
+    port: "5432"
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true

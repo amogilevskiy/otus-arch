@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "8bed7d65-d669-438a-b4d7-678ec5af46fb",
+		"name": "otus-k8s-db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"First name\",\n    \"last_name\": \"Last name\",\n    \"email\": \"test@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partially update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"New name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/api/1.0/users/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"api",
+						"1.0",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/otusapp/amogilevskiy/actuator/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"otusapp",
+						"amogilevskiy",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c5c443c5-ec8a-4c6c-8417-316f8eaefaef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d32a523b-f2db-4fd6-88b8-cba8c6549850",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1002ad85-d953-4f46-a7a7-a976846437c3",
+			"key": "base_url",
+			"value": "arch.homework"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
