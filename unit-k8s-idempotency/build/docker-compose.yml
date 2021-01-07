@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    image: amogilevskiy/otus-k8s-idempotency:1.0.0
+    container_name: app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/dev
+      - SPRING_DATASOURCE_USERNAME=dev
+      - SPRING_DATASOURCE_PASSWORD=dev
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  db:
+    image: postgres:12-alpine
+    container_name: db
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev

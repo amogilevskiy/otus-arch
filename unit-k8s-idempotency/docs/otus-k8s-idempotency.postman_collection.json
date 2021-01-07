@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "e8637f72-4720-4427-b43d-8bc41c736b39",
+		"name": "otus-k8s-idempotency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/1.0/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "If-Match",
+						"value": "\"0\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"3 Pizzas\",\n    \"address\": \"Default city\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/1.0/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/actuator/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dd0b9fbc-819d-4870-a90b-f04e673cb0ae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c702387d-b4a3-4b26-bf8d-928a3d48a2a6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b6b7d686-57ec-4bfe-950b-eb10cee73f62",
+			"key": "base_url",
+			"value": "arch.homework"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
